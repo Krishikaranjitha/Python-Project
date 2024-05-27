@@ -1,0 +1,8 @@
+body{
+    background-color: rgb(230, 175, 222);
+}
+table{
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}

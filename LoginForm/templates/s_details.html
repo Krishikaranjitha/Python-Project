@@ -1,0 +1,45 @@
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}"/>
+        <link rel="stylesheet" href="{% static '/css/one.css' %}"/>
+        <script src="{% static '/Js/bootstrap.min.js' %}"></script>
+        <script src="{% static '/Js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static '/Js/bootstrap.bundle.js' %}"></script>
+
+    </head>
+    <body>
+        <center>
+        <table >
+           
+            <h1>Student Details</h1>
+            <tr>
+                <th> Name</th>
+                <th>Father's Name</th>
+                <th>Mother's Name</th>
+                <th>Date of Birth</th>
+                <th>Address</th>
+                <th>Email</th>
+                <th>Mobile No.</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            {% for i in data %}
+            <tr>
+                <td>{{i.name}}</td>         
+                <td>{{i.f_name}}</td>          
+                <td>{{i.m_name}}</td>
+                <td>{{i.dob}}</td>
+                <td>{{i.address}}</td>
+                <td>{{i.email}}</td>
+                <td>{{i.m_no}}</td>
+                <td><button><a href="Edit/{{i.id}}">Edit</a></button></td>
+                <td><button><a href="delete/{{i.id}}">Delete</a></button></td>
+            </tr>
+            {% endfor %}
+        </table>  </center>
+       
+    </body>
+
+
+    </html>

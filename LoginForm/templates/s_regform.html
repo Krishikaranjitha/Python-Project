@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% block content %}
+<center>
+<form action='' method="POST">
+    {% csrf_token %}
+
+    <h1>Addmission Form</h1>
+    <br>
+    {% if success %}
+        {{ success}}
+    {% endif %}
+    <table>
+        <tr>
+            <td> Name</td>
+            <td><input type="text" name="name" placeholder="Name"></td>         
+        </tr>
+        <tr>
+            <td> Father's Name</td>
+            <td><input type="text" name="f_name" placeholder="Father's name"></td>          
+        </tr>
+        <tr>
+            <td> Mother's Name</td>
+            <td><input type="text" name="m_name" placeholder="Mother's name"></td>       
+        </tr>
+        <tr>
+           <td>Date of Birth</td>
+           <td><input type="date" name="dob" placeholder="Date of Birth"></td>
+        </tr>
+        {% comment %} <tr>
+           <td>Gender</td>
+           <td>
+                <select>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Transgender</option>
+                </select>
+            </td>
+        </tr>  {% endcomment %}
+        <tr>
+            <td>Address</td>
+            <td><input type="Address" name="address" placeholder="Address"></td>
+        </tr>
+        <tr>
+            <td> Email</td>
+            <td><input type="email" name="email" placeholder="Email"></td>
+        </tr>
+        <tr>
+            <td>Mobile No.</td>
+            <td><input type="text" name="mobile" ></td>
+        </tr>
+        {% comment %} 
+        <tr> 
+            <td>Catagory</td>
+            <td>
+                <select>
+                    <option>SC</option>
+                    <option>BC</option>
+                    <option>MBC</option>
+                    <option>OC</option>
+                    <option>ST</option>
+                    <option>OTHERS</option>
+                    
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Courses</td>
+            <td>
+                <select>
+                    <option>Computer science and Engineering</option>
+                    <option>Civil Engineering</option>
+                    <option>Mechanical Engineering</option>
+                    <option>Electrical and Electronics Engineering</option>
+                    <option> Electronics and comminication Engineering</option>
+                    <option>Aeronatical Engineering</option>
+                    
+                </select>
+            </td>
+        </tr> {% endcomment %}
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" href="/s_form" value="Submit">&nbsp;&nbsp; <input type="reset" value="Reset"></td>
+           
+        </tr>     
+       
+    </table>
+    </form></center>
+
+{% endblock %}

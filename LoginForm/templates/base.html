@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+    <head>
+        <title>
+        </title>
+        <link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}" />
+        <link rel="stylesheet" href="{% static '/css/one.css' %}">
+        <script src="{% static '/Js/bootstrap.min.js' %}"></script>
+        <script src="{% static '/Js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static '/Js/bootstrap.bundle.js' %}"></script>
+
+
+    </head>
+
+    <body>
+       {% include 'nav.html' %}
+
+    {% block content %}
+
+    {% endblock  %}
+
+        
+    </body>
+
+
+</html>

@@ -1,0 +1,48 @@
+{% load static %}
+<html>
+    <head>
+        <title>
+        </title>
+        <link rel="stylesheet" href={% static '/css/bootstrap.min.css' %} />
+        <link rel="stylesheet" href={% static '/css/one.css' %} />
+        <script src={% static '/Js/bootstrap.min.js' %}></script>
+        <script src={% static '/Js/bootstrap.bundle.min.js' %}></script>
+        <script src={% static '/Js/bootstrap.bundle.js' %}></script>
+
+
+    </head>
+
+    <body>
+        <center>
+        <h1>Login Form</h1>
+        {% if errmsg %}
+           <div class="alert alert-danger" role="alert">
+           {{errmsg}}
+           </div>
+            {% endif %}
+        <form action="" method="POST">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="uname"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type="Password" name="pwd"></td>
+                </tr>
+                <tr>
+                    <td> <input type="submit" href='/index' value="Login"></td>
+                </tr>
+            </table>
+                           <p>Don't hava an account?<button><a href='/Reg'>Register</a></button>
+        </form>
+
+        
+        
+    </center>   
+
+    </body>
+
+
+</html>
